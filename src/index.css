@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F5E8D1] text-[#211B18] font-sans tracking-normal antialiased;
+    background-image: radial-gradient(rgba(143, 50, 21, 0.04) 1.5px, transparent 0);
+    background-size: 28px 28px;
+  }
+
+  h1, h2, h3, .font-title {
+    @apply font-comfortaa font-bold tracking-tight;
+  }
+}
+
+/* Custom Creative Styles for Client Interface */
+.artistic-card {
+  background: #F5E8D1;
+  border: 1px solid rgba(168, 90, 42, 0.2);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px -10px rgba(66, 23, 13, 0.05);
+}
+
+.artistic-card:hover {
+  border-color: rgba(143, 50, 21, 0.4);
+  transform: translateY(-6px) rotate(-0.5deg);
+  box-shadow: 0 25px 50px -15px rgba(66, 23, 13, 0.12);
+}
+
+.cacao-panel {
+  background: linear-gradient(135deg, #42170D 0%, #211B18 100%);
+  border: 1px solid rgba(214, 181, 139, 0.25);
+}
+
+.terracotta-gradient-text {
+  background: linear-gradient(135deg, #8F3215 0%, #A85A2A 50%, #D6B58B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sable-gradient-text {
+  background: linear-gradient(135deg, #D6B58B 0%, #F5E8D1 50%, #A85A2A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-terracotta {
+  box-shadow: 0 0 35px rgba(143, 50, 21, 0.3);
+}
+
+.glow-cognac {
+  box-shadow: 0 0 35px rgba(168, 90, 42, 0.25);
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5E8D1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A85A2A;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8F3215;
+}
+
+/* Utility to completely hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+/* Hide scrollbars on all cards and their internal scrollable elements */
+.artistic-card,
+.artistic-card * {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.artistic-card::-webkit-scrollbar,
+.artistic-card *::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
